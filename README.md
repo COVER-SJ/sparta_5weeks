@@ -13,6 +13,8 @@
 ### API 명세서
 
 
-### ERD 
-![erd최최종](https://user-images.githubusercontent.com/46406965/187891903-9ec0c2e5-40fc-478f-b2dc-f15b7c919ba6.JPG)
+### ERD !
+[erd최최종](https://user-images.githubusercontent.com/46406965/187892058-e817d489-5fb2-40d9-8ef1-78508d63c871.JPG)
+
+
 
