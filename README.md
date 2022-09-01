@@ -11,12 +11,13 @@
 ##### 기능6 : 스케줄러  - 매일 AM 1:00마다 댓글이 0개인 게시물 전체 삭제하기
 ######
 
+___
 
 ### ERD !
 ![마지막입니다정말](https://user-images.githubusercontent.com/46406965/187893937-cac983b6-11a4-4635-bd22-e39570b29136.png)
 
 
-
+___
 ### API 명세서 !
 
 ![api](https://user-images.githubusercontent.com/59364300/187895082-81997f5c-d063-47a7-851b-2ab352e9661e.PNG)
