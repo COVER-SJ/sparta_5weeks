@@ -1,7 +1,5 @@
 package com.example.intermediate.Validator;
 
-import net.bytebuddy.implementation.bytecode.Throw;
-
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.net.URL;

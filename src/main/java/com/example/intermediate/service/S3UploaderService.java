@@ -32,40 +32,37 @@ public class S3UploaderService {
 
     public String uploadFiles(MultipartFile multipartFile , String dirName)throws IOException{
         File uploadFile =convert(multipartFile)
-                .orElseThrow(()->new IllegalArgumentException("ERROR :  MultipartFile -> File convert fail"));
+                .orElseThrow(()->new IllegalArgumentException("ERROR :  MultipartFile -> File로 전환이 실패했습니다."));
 
         return upload(uploadFile,dirName);
     }
 
-    //(S3 서버에 올리면서 로컬에 만든 파일 지우기) 총괄 함수
-    public String upload(File uploadFile, String filepath){
-        String fileName = filepath+"/"+UUID.randomUUID() + uploadFile.getName();
+    public String upload(File uploadFile, String dirName){
+        String fileName = dirName+ "/"+ "/" + uploadFile.getName();
 
         String uploadImageUrl = putS3(uploadFile,fileName);
         removeNewFile(uploadFile);
         return uploadImageUrl;
     }
 
-    //S3 업로드
     public String putS3(File uploadFile, String fileName){
         amazonS3Client.putObject(new PutObjectRequest(bucket,fileName,uploadFile).withCannedAcl(CannedAccessControlList.PublicRead));
         return amazonS3Client.getUrl(bucket,fileName).toString();
     }
 
-    //로컬에 삭제
     private void removeNewFile(File targetFile){
         if(targetFile.delete()){
-            System.out.println("File delete success");
+            System.out.println("파일이 삭제되었습니다");
             return;
         }
-        System.out.println("file delete fail");
+        System.out.println("파일 삭제에 실패했습니다.");
     }
 
 
     //로컬에 파일 업로드하기
     private Optional<File> convert(MultipartFile file) throws IOException{
         String now = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
-        File convertFile = new File(System.getProperty("user.dir") + "/" +now+".jpg" );
+        File convertFile = new File(file.getOriginalFilename());
 
         if(convertFile.createNewFile()){
             try(FileOutputStream fos = new FileOutputStream(convertFile)){
@@ -73,7 +70,6 @@ public class S3UploaderService {
             }
             return Optional.of(convertFile);
         }
-        System.out.println("변환실패");
         return Optional.empty();
     }
 
