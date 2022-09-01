@@ -14,7 +14,7 @@
 
 
 ### ERD !
-[erd최최종](https://user-images.githubusercontent.com/46406965/187892058-e817d489-5fb2-40d9-8ef1-78508d63c871.JPG)
+![erd최최종](https://user-images.githubusercontent.com/46406965/187892174-9273cefd-aa68-4e6e-a21c-4203b96aadc9.JPG)
 
 
 
