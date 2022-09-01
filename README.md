@@ -14,7 +14,8 @@
 
 
 ### ERD !
-![끝이다정말](https://user-images.githubusercontent.com/46406965/187892317-05b55f30-a55d-45f0-9015-ce7e943d2986.JPG)
+![마지막입니다정말](https://user-images.githubusercontent.com/46406965/187893937-cac983b6-11a4-4635-bd22-e39570b29136.png)
+
 
 
 
