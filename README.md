@@ -14,4 +14,5 @@
 
 
 ### ERD 
-![erd최종](https://user-images.githubusercontent.com/46406965/187891641-86dc9ec4-22c9-4185-b07a-89dcc6bc9381.JPG)
+![erd최최종](https://user-images.githubusercontent.com/46406965/187891903-9ec0c2e5-40fc-478f-b2dc-f15b7c919ba6.JPG)
+
